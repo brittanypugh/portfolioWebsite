@@ -1,5 +1,5 @@
 var main = function () {
-    document.write("hello world");
+    //document.write("hello world");
 };
 
 $(document).ready(main);
