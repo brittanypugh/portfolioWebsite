@@ -18,6 +18,25 @@
     <script type="text/javascript" src="application1.js"></script>
 </head>
 <body>
+    <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">HOME</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">ABOUT ME</a></li>
+        <li><a href="#">MY WORK</a></li>
+        <li><a href="contactMe.html">CONTACT ME</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
     <div class="container-fluid text-center">
         <div id="intro">
             <h4>New to the Area</h4>
@@ -28,14 +47,15 @@
         <div class="choice" id="choice1a">
             <h4>Nervous About Cooking</h4>
             <p>You are reasonably confident that you can cook something edible. What do you decide to make?</p>
-            <p><input type="submit" name="choice 2a" id="btn2a" value="Salad"></p>
-            <p><input type="submit" name="choice 2b" id="btn2b" value="Cupcakes"></p></div>
+            <button id="btn2a">Salad</button>
+            <button id="btn2b">Cupcakes</button></div>
+        
         
         <div class="choice" id="choice1b">
             <h4>Took the Easy Way</h4>
             <p>You decide to head to the store to buy something. How will you get there?</p>
-            <p><input type="submit" name="choice 2c" id="btn2c" value="Public Transportation"></p>
-            <p><input type="submit" name="choice 2d" id="btn2d" value="Car"></p></div>
+            <button id="btn2c">Public Transportation</button>
+            <button id="btn2d">Car</button></div>
         
         <div class="choice" id="choice2a">
             <h4>Everyone Loves Salad</h4>
