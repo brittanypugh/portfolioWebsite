@@ -1,5 +1,17 @@
 body {
-  background: #FFF
+  	background: #FFF;
+	font-family: Montserrat;
+}
+
+#aboutMeSection h3{
+	background: pink;
+	font-weight: 700;
+	text-align: center;
+}
+
+#aboutMeSection p::first-letter{
+	font-size: 30px;
+	font-family: serif;
 }
 .body .jumbotron {
   margin-bottom: 0
@@ -12,12 +24,12 @@ body {
 .panel-heading .accordion-toggle:after {
     /* symbol for "opening" panels */
     font-family: 'Glyphicons Halflings';  /* enables glyphicons */
-    content: "\e114";    /* glyphicon-chevron-down */
+    content: "\e158";    /* glyphicon-chevron-down */
     float: right;        /* put chevron on right edge of panel */
     color: grey;         
 }
 
 /*closed accordion panel*/
 .panel-heading .accordion-toggle.collapsed:after {
-    content: "\e080";    /* glyphicon-chevron-right (>) */
+    content: "\e159";    /* glyphicon-chevron-right (>) */
 }
