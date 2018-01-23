@@ -8,12 +8,16 @@ body {
     margin-bottom: 0
 }
 
-.choice{
-/*
-    background-color: blue;
-    color: red;
-*/
-    margin-bottom: 5px;
-    padding: 15px;
-    border: dashed;
+/*open accordion panel*/
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* enables glyphicons */
+    content: "\e114";    /* glyphicon-chevron-down */
+    float: right;        /* put chevron on right edge of panel */
+    color: grey;         
+}
+
+/*closed accordion panel*/
+.panel-heading .accordion-toggle.collapsed:after {
+    content: "\e080";    /* glyphicon-chevron-right (>) */
 }
