@@ -9,6 +9,10 @@ body {
 	text-align: center;
 }
 
+#aboutMeSection p{
+	padding-left: 5px;
+	padding-right: 5px;
+}
 #aboutMeSection p::first-letter{
 	font-size: 30px;
 	font-family: serif;
