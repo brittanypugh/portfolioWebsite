@@ -1,11 +1,10 @@
 body {
   	background: #FFF;
-	font-family: Montserrat;
+	font-family: 'Montserrat','Courier New', serif;
 }
 
 #aboutMeSection h3{
 	background: pink;
-	font-weight: 700;
 	text-align: center;
 }
 
