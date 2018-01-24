@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet"> 
     
     <!--Bootstrap&JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -49,9 +48,9 @@
 		<h2 style="text-align: center">About Me</h2>
 		
 		<div class="row">
-			<div class="col-sm-1"></div>
+			<div class="col-xs-1"></div>
 			
-			<div class="col-sm-5">
+			<div class="col-xs-5">
 				<h3>I like challenging work.</h3> 
 				<p>I attended <a href="http://www.nyu.edu/" target="_blank">New York University</a> for two years while enrolled in the five-year dual-degree program for Computer Science and Electrical Engineering. During the Fall of my Sophomore year, I enjoyed <a href="https://www.tumblr.com/blog/adoseoflondon" target="_blank">studying abroad in London</a>. While in London I planned volunteer events throughout London and Wales.</p>
 
@@ -62,23 +61,22 @@
 				<p>I learned archery in London. I have taught myself piano, juggling and knitting.</p>
 			</div>
 
-			<div class="col-sm-5">
+			<div class="col-xs-5">
 				<h3>I have a knack for languages (not just the programming ones).</h3> 
 				<p>I have learned Spanish (a few semesters in college) and Italian (self-study for a year) in the past and <a href="https://www.italki.com/user/3347652" target="_blank">currently study Brazilian-Portuguese</a>.</p>
 
 				<h3>I enjoy traveling and learning about new cultures.</h3>
 				<p>In the past I have lived and worked on both coasts of the US. Outside of the United States, I have traveled to England, Wales, Spain, France and Portugal.</p>
-				
-				
 			</div>
 			
-			<div class="col-sm-1"></div>
+			<div class="col-xs-1"></div>
 		</div>
 	</div>
 	<div id="experienceSection">
 		<h2 style="text-align: center">Experience</h2>
 		<!-- Add Accordion -->
 		<div class="panel-group" id="accordion">
+			
 			<!-- Card 1 -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -158,42 +156,86 @@
 			</div>
 
 		</div>
-		</div>	
+	</div>	
 		
 	<!-- Add Contact Form -->
 	<div class="container-fluid bg-grey">
-	  <h2 class="text-center" id=contactSection>Contact Me</h2>
-	  <div class="row">
-		<div class="col-sm-4">
-			<p>I am currently based in the Dallas Fort-Worth Metroplex area.</p>
+		<h2 class="text-center" id="contactSection">Contact Me</h2>
+	  	
+		<div class="row">
+		<div class="col-xs-4">
+			<br><p>I am currently based in the Dallas Fort-Worth Metroplex area. You can find me on <a href="https://github.com/brittanypugh" target="_blank">GitHub</a> or connect with me <a href="https://www.linkedin.com/in/brittanypugh/" target="_blank">LinkedIn</a>.</p>
+			
 			<p>I would love to get your feedback! Send me a message.</p>
-			<p>You can find me on <a href="https://github.com/brittanypugh" target="_blank">GitHub</a> or connect with me <a href="https://www.linkedin.com/in/brittanypugh/" target="_blank">LinkedIn</a>.</p>
 		</div>
-		<div class="col-sm-8">
-		  <div class="row">
-			<div class="col-sm-6 form-group">
-			  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-			</div>
-			<div class="col-sm-6 form-group">
-			  <input class="form-control" id="email" name="email" placeholder="Your Email" type="email" required>
-			</div>
-			<div class="col-sm-12 form-group">
-			  <input class="form-control" id="subject" name="subject" placeholder="Subject" type="subject" required>
-			</div>
-		  </div>
-		  <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-		  <div class="row">
-			<div class="col-sm-12 form-group">
-			  <button class="btn btn-default pull-right" type="submit">Send</button>
-			</div>
-		  </div> 
-		</div>
-	  </div>
-	</div>
+		<div class="col-xs-8">
+			<form id="contact-form" method="post" action="contact.php" role="form">
+				<div class="messages"></div>
+				<div class="controls">
+					
+		  			<div class="row">
+						<!-- First Name -->
+						<div class="col-xs-6 form-group">
+							<label for="form_firstname">First Name*</label>
+						  <input class="form-control" id="form_firstname" name="name" placeholder="First Name" type="text" required="required" data-error="First name is required.">
+							<div class="help-block with-errors"></div>
+						</div>
+					  	
+						<!-- Last Name -->
+						<div class="col-xs-6 form-group">
+							<label for="form_lastname">Last Name*</label>
+						  <input class="form-control"  id="form_lastname" name="surname" placeholder="Last Name" type="text" required="required" data-error="Last name is required.">
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<!-- Your Email -->
+						<div class="col-xs-6 form-group">
+							<label for="form_email">Your Email*</label>
+					  <input class="form-control" id="form_email" name="email" placeholder="Your Email" type="email" required="required" data-error="Valid email is required.">
+							<div class="help-block with-errors"></div>
+					</div>
+					  	
+						<!-- Subject -->
+						<div class="col-xs-6 form-group">
+							<label for="form_subject">Subject*</label>
+					  <input class="form-control" id="form_subject" name="subject" placeholder="Subject" type="text" required="required" data-error="Valid email is required">
+							<div class="help-block with-errors"></div>
+					</div>
+				  	</div>
 
+					<div class="row">
+						<!-- Message -->
+						<div class="col-xs-12 form-group">
+							<label for="form_message">Message*</label>
+							<textarea class="form-control" id="form_message" name="message" placeholder="Message" rows="5" required="required" data-error="Please, leave a message."></textarea>
+							<div class="help-block with-errors"></div><br>
+						</div>
+					</div>
+					
+					<div class="row">
+					<!-- Send Button -->
+					<div class="col-xs-12 form-group">
+					  <button class="btn btn-default btn-send pull-right" type="submit">Send</button>
+					</div>
+		  			</div>
+					
+					<div class="row">
+					<div class="col-xs-12">
+						<p class="text-muted" align="right"> <strong>*</strong> These fields are required.</p>
+						</div>
+					</div>
+					
+				</div>
+			</form>
+	  </div>
+		</div>
+	</div>
+	
 	<!-- Add Footer -->
 	<div class="panel-footer">
-        	<p align="right">I created this website using HTML5, CSS3, JavaScript, JQuery and Bootstrap</p>
-    	</div>
+		<p align="right">I created this website using HTML5, CSS3, JavaScript, JQuery and Bootstrap</p>
+    </div>
 </body>
 </html>
