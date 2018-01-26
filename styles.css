@@ -1,26 +1,17 @@
-body {
-  	background: #FFF;
+html, body {
 	font-family: 'Montserrat','Courier New', serif;
 }
 
-#aboutMeSection h3{
-	background: pink;
-	text-align: center;
+.jumbotron {
+  	margin-bottom: 0;
 }
 
-#aboutMeSection p{
-	padding-left: 5px;
-	padding-right: 5px;
-}
-#aboutMeSection p::first-letter{
-	font-size: 30px;
-	font-family: serif;
-}
-.body .jumbotron {
-  margin-bottom: 0
-}
 .navbar {
-    margin-bottom: 0
+    margin-bottom: 0;
+}
+
+.navbar-nav>li>a{
+	font-weight: 700;
 }
 
 /*open accordion panel*/
