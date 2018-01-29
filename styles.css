@@ -1,10 +1,11 @@
 html, body {
 	font-family: 'Montserrat','Courier New', serif;
-	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	background: linear-gradient(180deg, #bcd2ee 20%, #2cb5e8); /* light blue to dark blue - top left to bottom right */
 }
 
 .jumbotron {
   	margin-bottom: 0;
+	background-color: #bcd2ee; light steel blue
 }
 
 .navbar {
@@ -42,7 +43,7 @@ html, body {
 }
 
 .form-control{
-	background-color: rgba(250,250,250, 0.8);
+	opacity: 0.75;
 }
 
 .panel-footer p{
