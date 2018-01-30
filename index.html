@@ -21,6 +21,41 @@
     <script type="text/javascript" src="application1.js"></script>
 </head>  
 <body>
+	
+<script>
+function validateForm() {
+    var name =  document.getElementById('name').value;
+    if (name == "") {
+        document.getElementById('status').innerHTML = "Name cannot be empty";
+        return false;
+    }
+    var email =  document.getElementById('email').value;
+    if (email == "") {
+        document.getElementById('status').innerHTML = "Email cannot be empty";
+        return false;
+    } else {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(email)){
+            document.getElementById('status').innerHTML = "Email format invalid";
+            return false;
+        }
+    }
+    var subject =  document.getElementById('subject').value;
+    if (subject == "") {
+        document.getElementById('status').innerHTML = "Subject cannot be empty";
+        return false;
+    }
+    var message =  document.getElementById('message').value;
+    if (message == "") {
+        document.getElementById('status').innerHTML = "Message cannot be empty";
+        return false;
+    }
+    document.getElementById('status').innerHTML = "Sending...";
+    document.getElementById('contact-form').submit();
+
+}
+</script>
+	
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container">
 		<div class="navbar-header">
@@ -175,7 +210,7 @@
 			<p>I would love to get your feedback! Send me a message.</p>
 		</div>
 		<div class="col-xs-8">
-			<form id="contact-form" method="post" action="contact.php" role="form">
+			<form id="contact-form" method="post" action="process.php" role="form">
 				<div class="messages"></div>
 				<div class="controls">
 					
@@ -183,14 +218,14 @@
 						<!-- First Name -->
 						<div class="col-xs-6 form-group">
 							<label for="form_firstname">First Name*</label>
-						  <input class="form-control" id="form_firstname" name="name" placeholder="First Name" type="text" required="required" data-error="First name is required.">
+						  <input class="form-control" id="form_firstname" name="name" placeholder="Enter Your First Name" type="text" required="required" data-error="First name is required.">
 							<div class="help-block with-errors"></div>
 						</div>
 					  	
 						<!-- Last Name -->
 						<div class="col-xs-6 form-group">
 							<label for="form_lastname">Last Name*</label>
-						  <input class="form-control"  id="form_lastname" name="surname" placeholder="Last Name" type="text" required="required" data-error="Last name is required.">
+						  <input class="form-control"  id="form_lastname" name="surname" placeholder="Enter Your Last Name" type="text" required="required" data-error="Last name is required.">
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
@@ -199,33 +234,38 @@
 						<!-- Your Email -->
 						<div class="col-xs-6 form-group">
 							<label for="form_email">Your Email*</label>
-					  <input class="form-control" id="form_email" name="email" placeholder="Your Email" type="email" required="required" data-error="Valid email is required.">
+					  <input class="form-control" id="form_email" name="email" placeholder="Enter Your Email" type="email" required="required" data-error="Valid email is required.">
 							<div class="help-block with-errors"></div>
-					</div>
+						</div>
 					  	
 						<!-- Subject -->
 						<div class="col-xs-6 form-group">
 							<label for="form_subject">Subject*</label>
-					  <input class="form-control" id="form_subject" name="subject" placeholder="Subject" type="text" required="required" data-error="Valid email is required">
+					  <input class="form-control" id="form_subject" name="subject" placeholder="Add Subject" type="text" required="required" data-error="Valid email is required">
 							<div class="help-block with-errors"></div>
-					</div>
+						</div>
 				  	</div>
 
 					<div class="row">
 						<!-- Message -->
 						<div class="col-xs-12 form-group">
 							<label for="form_message">Message*</label>
-							<textarea class="form-control" id="form_message" name="message" placeholder="Message" rows="5" required="required" data-error="Please, leave a message."></textarea>
+							<textarea class="form-control" id="form_message" name="message" placeholder="Add Message" rows="5" required="required" data-error="Please, leave a message."></textarea>
 							<div class="help-block with-errors"></div><br>
 						</div>
 					</div>
 					
 					<div class="row">
-					<!-- Send Button -->
-					<div class="col-xs-12 form-group">
-					  <button class="btn btn-default btn-send pull-right" type="submit">Send</button>
+						<div id="msgSubmit" class="col-xs-12 h3 hidden"></div>
 					</div>
+					
+					<div class="row">
+					<!-- Send Button -->
+						<div class="col-xs-12">
+					  	 <button class="btn btn-default btn-send pull-right" type="submit" id="form_submit" onclick="validateForm()">Send</button>
+						</div>
 		  			</div>
+					
 					
 					<div class="row">
 					<div class="col-xs-12">
