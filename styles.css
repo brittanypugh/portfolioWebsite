@@ -5,7 +5,7 @@ html, body {
 
 .jumbotron {
   	margin-bottom: 0;
-	background-color: #bcd2ee; light steel blue
+	background-color: #bcd2ee;
 }
 
 .navbar {
@@ -46,6 +46,11 @@ html, body {
 	opacity: 0.75;
 }
 
+#msgSubmit{
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
 .panel-footer p{
 	text-align: right;
 }
